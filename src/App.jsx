@@ -1,3 +1,11 @@
+// Importing files 
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from './Home';
+import About from "./About";
+import Vans from "./Vans";
+
+
 /**
  * Challenge:
  * Bootstrap the VanLife project by creating the first 2 routes:
@@ -14,11 +22,24 @@
  * linked in the slides.
  */
 
-function App() {
+  function App() {
 
   return (
-    <h1>Start here</h1>
+     <BrowserRouter>
+       <header>
+        <Link className= "site-logo" to="/">#VANLIFE</Link>
+        <nav>
+          <Link to="/about">About</Link>
+          <Link to="/vans">Vans</Link>
+        </nav>
+       </header>
+
+       <Routes>
+          <Route path = "/" element = {< Home />}/>
+          <Route path = "/about" element = {< About />}/>
+          <Route path = "/vans" element = {< Vans />}/>
+        </Routes>
+      </BrowserRouter>
   )
 }
-
-export default App
+ export default App
