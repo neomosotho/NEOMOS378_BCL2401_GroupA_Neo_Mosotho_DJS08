@@ -1,9 +1,10 @@
-// Importing files 
+// Importing files
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from './Home';
 import About from "./About";
 import Vans from "./Vans";
+import VanDetail from "./VanDetail";
 
 
 /**
@@ -22,6 +23,8 @@ import Vans from "./Vans";
  * linked in the slides.
  */
 
+import "./server"
+
   function App() {
 
   return (
@@ -36,8 +39,9 @@ import Vans from "./Vans";
 
        <Routes>
           <Route path = "/" element = {< Home />}/>
-          <Route path = "/about" element = {< About />}/>
+          <Route path = "/about" element = {< About />}/> 
           <Route path = "/vans" element = {< Vans />}/>
+          <Route path = "/vans/:id" element = {< VanDetail />}/>
         </Routes>
       </BrowserRouter>
   )
