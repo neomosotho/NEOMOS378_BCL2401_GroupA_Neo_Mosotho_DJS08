@@ -6,7 +6,9 @@ import About from "./About";
 import Vans from "./Vans";
 import VanDetail from "./VanDetail";
 import Layout from "./Layout";
-import Dashboard from "./Host/Dashboard";
+import Dashboard from "./Dashboard";
+import Income from "./Income";
+import Review from "./Review";
 
 /**
  * Challenge:
@@ -36,9 +38,12 @@ import "./server"
           <Route path = "/about" element = {< About />}/> 
           <Route path = "/vans" element = {< Vans />}/>
           <Route path = "/vans/:id" element = {< VanDetail />}/>
+          <Route path = "/dashboard" element = {< Dashboard />}/>
+          <Route path = "/income" element = {< Income />}/>
+          <Route path = "/review" element = {< Review />}/>
         </Route>  
       </Routes>
     </BrowserRouter>
   )
 }
- export default App
+export default App
