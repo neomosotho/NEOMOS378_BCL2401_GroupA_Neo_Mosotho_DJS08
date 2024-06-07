@@ -5,9 +5,9 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Vans from "./Pages/Vans/Vans";
 import VanDetail from "./Pages/Vans/VanDetail";
-// import Dashboard from "./Host/Dashboard";
+import Dashboard from "./Pages/Host/Dashboard";
 import Income from "./Pages/Host/Income";
-import Review from "./Pages/Host/Review";
+import Reviews from "./Pages/Host/Reviews";
 import Layout from "./Components/Layout";
 import HostLayout from "./Components/HostLayout";
 
@@ -34,18 +34,21 @@ import "./server"
   return (
     <BrowserRouter>
       <Routes>
-        <Route element = { < Layout />}>
-          <Route path = "/" element = {< Home />}/>
-          <Route path = "/about" element = {< About />}/> 
-          <Route path = "/vans" element = {< Vans />}/>
-          <Route path = "/vans/:id" element = {< VanDetail />}/>
+        <Route path = "/" element = { < Layout />}>
+          <Route index element = {< Home />}/>
+          <Route path = "about" element = {< About />}/> 
+
+          <Route path = "vans">
+            <Route index element = {< Vans />}/>
+            <Route path = ":id" element = {< VanDetail />}/>
+          </Route>
 
 
 
-          <Route path = "/host" element = {< HostLayout />}>
-            <Route path = "/host/income" element = {< Income />}/>
-            
-            <Route path = "/host/review" element = {< Review />}/>
+          <Route path = "host" element = {< HostLayout />}>
+            <Route index element = {< Dashboard />}/>
+            <Route path = "income" element = {< Income />}/>
+            <Route path = "reviews" element = {< Reviews />}/>
           </Route>
         </Route>  
       </Routes>
