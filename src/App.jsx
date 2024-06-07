@@ -3,11 +3,11 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
-import Vans from "./Vans";
-import VanDetail from "./Vans/VanDetail";
+import Vans from "./Pages/Vans/Vans";
+import VanDetail from "./Pages/Vans/VanDetail";
 // import Dashboard from "./Host/Dashboard";
-import Income from "./Host/Income";
-import Review from "./Host/Review";
+import Income from "./Pages/Host/Income";
+import Review from "./Pages/Host/Review";
 import Layout from "./Components/Layout";
 import HostLayout from "./Components/HostLayout";
 
