@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Importing files
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
