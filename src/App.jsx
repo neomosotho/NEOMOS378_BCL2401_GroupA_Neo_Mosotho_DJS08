@@ -3,8 +3,10 @@
 import React from 'react';
 // import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Login from "./pages/Login";
+import "./server"
 import Vans from "./Pages/Vans/Vans";
 import VanDetail from "./Pages/Vans/VanDetail";
 import Dashboard from "./Pages/Host/Dashboard";
@@ -14,9 +16,14 @@ import HostVans from "./Pages/Host/HostVans";
 import HostVanDetail from './Pages/Host/HostVanDetail';
 import Layout from "./Components/Layout";
 import HostLayout from "./Components/HostLayout";
-import "./server"
+import HostVanInfo from "./pages/Host/HostVanInfo.jsx";
+import HostVanPricing from "./pages/Host/HostVanPricing.jsx";
+import HostVanPhotos from "./pages/Host/HostVanPhotos.jsx";
+import AuthRequired from "./components/AuthRequired.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
-  function App() {
+
+export function App() {
 
   return (
     <BrowserRouter>
@@ -24,22 +31,28 @@ import "./server"
         <Route path = "/" element = { < Layout />}>
           <Route index element = {< Home />}/>
           <Route path = "about" element = {< About />}/> 
-            <Route path = "vans" element = {< Vans />}/>
-            <Route path = "vans/:id" element = {< VanDetail />}/>
+          <Route path = "vans" element = {< Vans />}/>
+          <Route path = "vans/:id" element = {< VanDetail />}/>
+          <Route path="login" element={<Login />} />
           
-
-          <Route path = "host" element = {< HostLayout />}>
-            <Route index element = {< Dashboard />}/>
-            <Route path = "income" element = {< Income />}/>
-            <Route path = "reviews" element = {< Reviews />}/>
-            <Route path = "vans" element = {< HostVans />}>
-            <Route index element = {< HostVans />}/>
-            <Route path = "vans/:id" element = {< HostVanDetail />}/>
+          
+          <Route element={<AuthRequired />}></Route>
+            <Route path = "host" element = {< HostLayout />}>
+              <Route index element = {< Dashboard />}/>
+              <Route path = "income" element = {< Income />}/>
+              <Route path = "reviews" element = {< Reviews />}/>
+              <Route path = "vans" element = {< HostVans />}>
+              <Route path = "vans/:id" element = {< HostVanDetail />}/>
+                <Route index element={<HostVanInfo />} />
+                <Route path="pricing" element={<HostVanPricing />} />
+                <Route path="photos" element={<HostVanPhotos />} />
+              </Route>
             </Route>
           </Route>
-        </Route>  
+
+          <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
-export default App
+
