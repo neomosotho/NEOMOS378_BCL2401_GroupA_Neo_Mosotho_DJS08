@@ -23,7 +23,7 @@ import AuthRequired from "./Components/AuthRequired.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 
 
-export function App() {
+export default function App() {
 
   return (
     <BrowserRouter>
