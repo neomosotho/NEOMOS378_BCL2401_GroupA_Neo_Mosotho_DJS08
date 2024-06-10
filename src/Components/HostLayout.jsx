@@ -15,19 +15,19 @@ export default function HostLayout() {
             <nav className = "host-nav">
                 <NavLink to="."
                 end // ending the Dashboard route
-                style = {({isActive}) => isActive ? activeStyles : null}
+                style = {({isActive}) => (isActive ? activeStyles : null)}
                 >Dashboard</NavLink>
 
                 <NavLink to="income"
-                style = {({isActive}) => isActive ? activeStyles : null}
+                style = {({isActive}) => (isActive ? activeStyles : null)}
                 >Income</NavLink>
 
                 <NavLink to="vans"
-                style = {({isActive}) => isActive ? activeStyles : null}
+                style = {({isActive}) => (isActive ? activeStyles : null)}
                 >Vans</NavLink>
 
-                <NavLink NavLinkto="reviews"
-                style = {({isActive}) => isActive ? activeStyles : null}
+                <NavLink to="reviews"
+                style = {({isActive}) => (isActive ? activeStyles : null)}
                 >Reviews</NavLink>
             </nav>
             <Outlet/>

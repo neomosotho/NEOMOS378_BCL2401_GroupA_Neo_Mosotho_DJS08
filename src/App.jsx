@@ -1,4 +1,3 @@
-// /* eslint-disable no-unused-vars */
 // Importing files
 import React from 'react';
 // import ReactDOM from 'react-dom/client';

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "firebase": "^10.12.2",
+    "mirage.js": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
@@ -26,5 +27,9 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "miragejs": "^0.1.48",
     "vite": "^5.2.0"
-  }
+  },
+  "description": "🎥 INSERT LOOM PRESENTATION LINK: [Here]",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
 }

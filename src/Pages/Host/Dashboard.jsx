@@ -76,9 +76,7 @@ export default function Dashboard() {
                         </>
                     )
                 }
-                {/*<React.Suspense fallback={<h3>Loading...</h3>}>
-                    <Await resolve={loaderData.vans}>{renderVanElements}</Await>
-                </React.Suspense>*/}
+                
             </section>
         </>
     )
