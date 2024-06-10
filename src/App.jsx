@@ -5,7 +5,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
-import Login from "./pages/Login";
+import Login from "./Pages/Login.jsx";
 import "./server"
 import Vans from "./Pages/Vans/Vans";
 import VanDetail from "./Pages/Vans/VanDetail";
@@ -16,11 +16,11 @@ import HostVans from "./Pages/Host/HostVans";
 import HostVanDetail from './Pages/Host/HostVanDetail';
 import Layout from "./Components/Layout";
 import HostLayout from "./Components/HostLayout";
-import HostVanInfo from "./pages/Host/HostVanInfo.jsx";
-import HostVanPricing from "./pages/Host/HostVanPricing.jsx";
-import HostVanPhotos from "./pages/Host/HostVanPhotos.jsx";
-import AuthRequired from "./components/AuthRequired.jsx";
-import NotFound from "./pages/NotFound.jsx";
+import HostVanInfo from "./Pages/Host/HostVanInfo.jsx";
+import HostVanPricing from "./Pages/Host/HostVanPricing.jsx";
+import HostVanPhotos from "./Pages/Host/HostVanPhotos.jsx";
+import AuthRequired from "./Components/AuthRequired.jsx";
+import NotFound from "./Pages/NotFound.jsx";
 
 
 export function App() {
