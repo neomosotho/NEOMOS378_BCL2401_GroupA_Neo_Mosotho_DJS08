@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Outlet, Navigate, useLocation } from "react-router-dom";
 
@@ -11,7 +12,7 @@ export default function AuthRequired() {
         to="/login"
         state={{
           message: "You must log in first",
-          from: location.pathname,
+          from: location.pathname
         }}
         replace
       />

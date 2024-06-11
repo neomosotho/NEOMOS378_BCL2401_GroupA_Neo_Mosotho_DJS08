@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Importing files
 import React from 'react';
 // import ReactDOM from 'react-dom/client';
@@ -22,7 +23,7 @@ import AuthRequired from "./Components/AuthRequired.jsx";
 import NotFound from "./Pages/NotFound.jsx";
 
 
-export default function App() {
+function App() {
 
   return (
     <BrowserRouter>
@@ -54,4 +55,6 @@ export default function App() {
     </BrowserRouter>
   );
 }
+
+export default App
 

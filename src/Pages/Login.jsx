@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { loginUser } from "../api.js";
@@ -19,7 +20,7 @@ export default function Login() {
     e.preventDefault();
     setStatus("submitting");
     loginUser(loginFormData)
-      .then((data) => {
+      .then(data => {
         setError(null);
         localStorage.setItem("loggedin", true);
         navigate(from, { replace: true });
