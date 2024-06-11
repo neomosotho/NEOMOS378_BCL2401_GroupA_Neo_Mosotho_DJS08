@@ -16,27 +16,54 @@ The focus for this project will be to understand routing and present your code. 
 
 For your recorded presentation, you will be discussing key concepts related to React Router, an essential tool for building single-page applications. To illustrate your understanding, address the following three questions in your presentation. These questions are designed to test your knowledge of the content from the "Advanced React Routing" Van Life Project, including setup, functionality, and application of React Router.
 
-### Question 1: Explain the Setup and Basic Configuration of React Router
+## Question 1: Explain the Setup and Basic Configuration of React Router
 
-**Key Points to Cover:**
-- What is the purpose of using React Router in a React application?
-- How do you set up React Router using `BrowserRouter` as shown in the lessons?
-- Describe the role of the `<Routes>` and `<Route>` components in defining the navigation structure.
+## Purpose of React Router:
 
-### Question 2: Application of Route Parameters and Nested Routes
+# Single-Page Application Navigation: React Router allows for dynamic routing within a single-page application (SPA) without needing full page reloads, enhancing the user experience.
+URL Management: It manages the URLs to reflect the current state and view of the application, making it easier to share specific parts of the app.
+Setting Up React Router:
 
-**Key Points to Cover:**
-- Explain what route parameters are and how they are used in React Router, including the use of `useParams()` to access these parameters.
-- Discuss the concept of nested routes as introduced in the lessons. What are nested routes, and how do they benefit the structure of a React application?
-- Provide an example, such as the configuration for nested routes in the VanLife project.
+# Installation: First, install the package via npm or yarn:
 
-### Question 3: Implementation of Navigation Controls and Dynamic Linking
+npm install react-router-dom
 
-**Key Points to Cover:**
-- How does the `<Link>` component enhance navigation within a React application?
-- Describe the use of `NavLink` for active styling. What makes `NavLink` different from the basic `Link` component?
-- Discuss the use of search parameters and the `useSearchParams` hook to dynamically filter content, as seen in the VanLife project challenges.
+## Defining Navigation Structure with <Routes> and <Route>:
 
-Be prepared to provide code snippets and real-world application examples from your Van Life Project to support your explanations.
+Routes: This component wraps all the route definitions.
+Route: Each <Route> defines a path and the component to render for that path.
 
-Make sure to submit your project to the DJS08 Project Tab on the LMS. Include a link to your Loom Presentation in your README.
+## Question 2: Application of Route Parameters and Nested Routes
+
+## Route Parameters:
+
+Definition: Parameters in routes (e.g., :id) allow dynamic content rendering based on the URL segment.
+Accessing Parameters: Use the useParams hook to retrieve parameter values.
+
+Nested Routes:
+
+Allows defining child routes within parent routes, enhancing modularity and layout consistency.
+Benefits: Facilitates better organization and reuse of layout components.
+
+## Question 3: Implementation of Navigation Controls and Dynamic Linking
+
+<Link> Component:
+
+Purpose: Provides navigation links to different routes in the application without reloading the page.
+
+<NavLink> for Active Styling:
+
+Difference from Link: NavLink adds styling to indicate the active route, enhancing user feedback.
+
+# Search Parameters with useSearchParams:
+
+Purpose: Enables dynamic content filtering based on query parameters.
+Example: Filtering vans based on search criteria.
+
+These points provide a comprehensive overview of React Router's setup, use of route parameters and nested routes, and navigation controls, with examples drawn from the Van Life project to illustrate each concept.
+
+## Challenges:
+Installation of dependencies, especially firebase.
+
+## Feedback:
+This project was very challenging but fun as well when it comes to the features I learned.
